@@ -1,4 +1,5 @@
 import logo from "../../assets/images/Group 10 (1).png";
+import Counter from "../Counter";
 
 export default function ProductCard({ product }) {
   return (
@@ -24,9 +25,7 @@ export default function ProductCard({ product }) {
         {product.price}
       </p>
       <div className="flex items-center gap-2 mb-3">
-        <button className="w-8 h-8 border flex items-center justify-center"> − </button>
-        <span className="w-8 h-8 border flex items-center justify-center text-gray-500">1</span>
-        <button className="w-8 h-8 border flex items-center justify-center"> + </button>
+        <Counter />
         <button className="w-10 bg-blue-600 text-white rounded-lg py-2 flex items-center justify-center hover:bg-blue-700 transition">
           <img src={logo} alt="cart" />
         </button>

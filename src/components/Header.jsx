@@ -23,13 +23,13 @@ const navLists = [
 export default function Header() {
   return (
     <>
-    <header className="bg-white shadow-sm px-6 py-4 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-20">
-          <img src={logo1} />
-          <p className="text-gray-400">От завода без посредников</p>
+    <header className="bg-white shadow-sm px-4 lg:px-6 py-4 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-0">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-20 w-full lg:w-auto justify-between lg:justify-start">
+          <img src={logo1} alt="Logo" className="h-8 object-contain" />
+          <p className="text-gray-400 text-sm sm:text-base text-center">От завода без посредников</p>
         </div>
-        <nav aria-label="Main" className="flex items-center gap-25">
+        <nav aria-label="Main" className="hidden lg:flex items-center gap-25">
           <ul className="flex items-center gap-8">
             {navLists.map((item) => (
               <li key={item.path}>
@@ -45,10 +45,15 @@ export default function Header() {
         </nav>
       </div>
     </header>
-    <div className="p-3 bg-[#EDEDED] flex items-center gap-20">
-      <button className="bg-[#167FFE] flex items-center text-white p-3 w-30 gap-3 ml-10"><img src={logo4} /> Каталог</button>
-      <input className="bg-white w-225 h-12 p-4" type="text" placeholder="Поиск"/><img className="relative right-20" src={logo5} />
-      <p className="flex items-center gap-2 relative right-10"><img src={logo6} />Иркутск</p>
+    <div className="p-3 bg-[#EDEDED] flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 flex-wrap">
+      <button className="bg-[#167FFE] flex justify-center items-center text-white p-3 w-full lg:w-auto rounded-md gap-3 lg:ml-10">
+        <img src={logo4} alt="Catalog" /> Каталог
+      </button>
+      <div className="flex items-center w-full lg:w-auto relative">
+        <input className="bg-white w-full lg:w-[450px] h-12 p-4 rounded-md outline-none pr-12" type="text" placeholder="Поиск"/>
+        <img className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer" src={logo5} alt="Search" />
+      </div>
+      <p className="flex items-center gap-2 w-full lg:w-auto justify-center"><img src={logo6} alt="Location" />Иркутск</p>
     </div>
     </>
   );

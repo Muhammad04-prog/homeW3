@@ -131,46 +131,48 @@ export default function App() {
   return (
     <>
       <Header />
-      <section className="head flex justify-around">
-        <div className="p-20 text-white space-y-5 relative top-20">
-          <h1 className="text-5xl">Новинка в России</h1>
-          <p className="text-2xl w-70">
+      <section className="head flex flex-col lg:flex-row justify-around items-center py-10 lg:py-0 px-4">
+        <div className="p-5 lg:p-20 text-white space-y-5 relative lg:top-20 z-10 text-center lg:text-left">
+          <h1 className="text-3xl md:text-5xl">Новинка в России</h1>
+          <p className="text-xl md:text-2xl w-full lg:w-70 mx-auto lg:mx-0">
             Север - теплоизоляция для сурового климата
           </p>
-          <h1 className="text-5xl font-bold">от 850 ₽ за 3м2</h1>
-          <Button text="ПOДPOБHEE" />
+          <h1 className="text-3xl md:text-5xl font-bold">от 850 ₽ за 3м2</h1>
+          <div className="flex justify-center lg:justify-start">
+            <Button text="ПOДPOБHEE" />
+          </div>
         </div>
-        <div>
-          <img className="relative top-20" src={logo} />
+        <div className="mt-10 lg:mt-0">
+          <img className="relative lg:top-20 w-full max-w-sm lg:max-w-none mx-auto" src={logo} alt="Север" />
         </div>
       </section>
       <section>
-        <div className="p-15 flex items-center justify-around gap-120">
-          <h1 className="text-4xl">Теплоизоляция 1</h1>
+        <div className="p-5 lg:p-15 flex flex-col md:flex-row items-center justify-center lg:justify-around gap-5 md:gap-120">
+          <h1 className="text-2xl md:text-4xl text-center">Теплоизоляция</h1>
           <Button text="СМОТРЕТЬ ВСЕ" />
         </div>
       </section>
       <ProductSlider products={products1} />
 
       <section>
-        <div className="p-15 flex items-center justify-around gap-120">
-          <h1 className="text-4xl">Строительные блоки</h1>
+        <div className="p-5 lg:p-15 flex flex-col md:flex-row items-center justify-center lg:justify-around gap-5 md:gap-120">
+          <h1 className="text-2xl md:text-4xl text-center">Строительные блоки</h1>
           <Button text="СМОТРЕТЬ ВСЕ" />
         </div>
       </section>
       <ProductSlider products={products2} />
 
       <section>
-        <div className="p-15 flex items-center justify-around gap-120">
-          <h1 className="text-4xl">Листовые материалы</h1>
+        <div className="p-5 lg:p-15 flex flex-col md:flex-row items-center justify-center lg:justify-around gap-5 md:gap-120">
+          <h1 className="text-2xl md:text-4xl text-center">Листовые материалы</h1>
           <Button text="СМОТРЕТЬ ВСЕ" />
         </div>
       </section>
       <ProductSlider products={products3} />
 
       <section>
-        <div className="p-15 flex items-center justify-around gap-120">
-          <h1 className="text-4xl">Кровля и водосток</h1>
+        <div className="p-5 lg:p-15 flex flex-col md:flex-row items-center justify-center lg:justify-around gap-5 md:gap-120">
+          <h1 className="text-2xl md:text-4xl text-center">Кровля и водосток</h1>
           <Button text="СМОТРЕТЬ ВСЕ" />
         </div>
       </section>
