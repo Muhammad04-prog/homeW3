@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+* {
+  font-family: Inter;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head {
+  background-image: url("./assets/images/tour-1\ 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+}
